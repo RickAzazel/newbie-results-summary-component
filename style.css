@@ -7,7 +7,8 @@
 }
 
 html {
-	font-size: 62.5%;;
+	font-size: 62.5%;
+	;
 }
 
 body {
@@ -15,45 +16,46 @@ body {
 	font-size: 1.8rem;
 }
 
-/* common */
-.summary-component-container {
+.wrapper {
 	display: flex;
+	justify-content: center;
 	align-items: center;
 	height: 100vh;
-	margin: 30px;
+	padding: 40px 30px;
 }
 
-.summary-component-main {
+.summary-component {
 	display: flex;
-	margin: 0 auto;
-	height: 650px;
-	width: 900px;
-	border-radius: 40px;
+	max-height: 650px;
+	max-width: 900px;
+	border-radius: 25px;
 	box-shadow: 10px 10px 40px 10px #EBF1FF;
 }
 
-.component-left,
-.component-right {
+.final-result,
+.summary-report {
 	flex: 0 1 50%;
-}
-
-/* left component */
-.component-left {
-	text-align: center;
-	background: linear-gradient(rgb(120, 87, 255),
-			rgb(46, 43, 233));
-	border-radius: 35px;
 	padding: 40px;
 }
 
-.component-left-title {
-	color: #c8c7ff;
+.final-result {
+	text-align: center;
+	background: linear-gradient(rgb(120, 87, 255),
+			rgb(46, 43, 233));
+	border-radius: 25px;
+}
+
+.title {
 	margin-bottom: 35px;
-	font-weight: 500;
 	font-size: 2.8rem;
 }
 
-.component-left-score {
+.final-result__title {
+	font-weight: 400;
+	color: #c8c7ff;
+}
+
+.score {
 	background: linear-gradient(rgba(78, 33, 202, 1),
 			rgba(36, 33, 202, 0));
 	padding: 55px;
@@ -62,57 +64,48 @@ body {
 	margin: 0 auto;
 }
 
-.result-score {
+.score__result {
 	font-size: 8.5rem;
 	font-weight: 700;
 	color: #ffffff;
 }
 
-.total-score {
+.score__total {
 	color: rgb(120, 87, 255);
 	font-size: 2.4rem;
 }
 
-.component-left-result {
+.output {
 	margin: 40px 0 20px 0;
 	color: #ffffff;
 	font-size: 4rem;
 	font-weight: 500;
 }
 
-.component-left-description {
+.description {
 	font-size: 2.4rem;
 	color: #c8c7ff;
 }
 
-/* right component */
-
-.component-right {
-	padding: 45px;
-}
-
-.component-right-title {
+.summary-report__title {
 	color: #303b5a;
-	margin-bottom: 30px;
-	font-size: 3rem;
 }
 
-.component-right-summary {
+.content {
 	margin-bottom: 50px;
 }
 
-.summary-row {
+.content__row {
 	display: flex;
-	justify-content: space-between;
 	height: 65px;
 	margin-bottom: 20px;
 	align-items: center;
 	padding: 0 15px;
-	border-radius: 15px;
+	border-radius: 10px;
 	font-size: 2.5rem;
 }
 
-.summary-row::before {
+.content__row::before {
 	content: '';
 	width: 25px;
 	height: 25px;
@@ -120,133 +113,175 @@ body {
 
 .red-row {
 	background-color: rgba(255, 87, 87, 0.1);
-}
-
-.red-row .summary-row-description {
 	color: rgb(255, 87, 87);
 }
 
 .red-row::before {
-	background: url('/assets/images/icon-reaction.svg') 0 0/contain no-repeat;
+	background: url('./assets/images/icon-reaction.svg') 0 0/contain no-repeat;
 }
 
 .yellow-row {
 	background-color: rgba(255, 176, 31, 0.1);
-}
-
-.yellow-row .summary-row-description {
 	color: rgb(255, 176, 31);
 }
 
 .yellow-row::before {
-	background: url('/assets/images/icon-memory.svg') 0 0/contain no-repeat;
+	background: url('./assets/images/icon-memory.svg') 0 0/contain no-repeat;
 }
 
 .green-row {
 	background-color: rgba(0, 189, 145, 0.1);
-}
-
-.green-row .summary-row-description {
 	color: rgb(0, 189, 145);
 }
 
 .green-row::before {
-	background: url('/assets/images/icon-verbal.svg') 0 0/contain no-repeat;
+	background: url('./assets/images/icon-verbal.svg') 0 0/contain no-repeat;
 }
 
 .blue-row {
 	background-color: rgba(17, 37, 212, 0.1);
-}
-
-.blue-row .summary-row-description {
 	color: rgb(17, 37, 212);
 }
 
 .blue-row::before {
-	background: url('/assets/images/icon-visual.svg') 0 0/contain no-repeat;
+	background: url('./assets/images/icon-visual.svg') 0 0/contain no-repeat;
 }
 
-.summary-row-description {
+.content__denomination {
 	flex-grow: 1;
 	padding-left: 15px;
 }
 
-.summary-row-score {
+.content__score {
 	color: #303b5a;
 }
 
-.summary-row-score span {
+.content__total-score {
 	color: rgba(48, 59, 90, 0.4);
 }
 
-.component-right-btn {
+.button {
 	width: 100%;
-	height: 70px;
-	border-radius: 60px;
+	height: 65px;
+	border-radius: 50px;
+	border: none;
 	background-color: #303b5a;
 	color: #ebf1ff;
-	font-size: 2.9rem;
+	font-size: 2.2rem;
 }
 
-.component-right-btn:hover {
+.button:hover {
 	cursor: pointer;
 	background: linear-gradient(rgb(120, 87, 255),
 			rgb(46, 43, 233));
 	transform: scale(1.1);
 }
 
-/* laptops */
-@media (max-width: 1024px) {
-	.component-left-description {
-		
-	}
-}
-
 /* tablets */
 @media (max-width: 768px) {
-	.summary-component-container {
-		align-items: normal;
-		margin: 10px 30px;
+	html {
+		font-size: 50%;
 	}
 
-	.summary-component-main {
+	.wrapper {
+		padding: 0;
+		align-items: normal;
+	}
+
+	.summary-component {
 		flex-wrap: wrap;
 		box-shadow: none;
 	}
 
-	.component-left,
-	.component-right {
+	.summary-report,
+	.final-result {
 		flex: 0 1 100%;
+	}
+
+	.final-result {
+		border-radius: 0 0 40px 40px;
+		padding: 20px 0 40px 0;
+	}
+
+	.title {
+		margin-bottom: 20px;
+	}
+
+	.score {
+		width: 230px;
+	}
+
+	.output {
+		margin: 20px 0 10px 0;
+	}
+
+	.button {
+		font-size: 3rem;
 	}
 }
 
 /* mobile */
 @media (max-width: 480px) {
 	html {
-		font-size: 50%;
+		font-size: 39%;
 	}
 
-	.summary-component-container {
-		margin: 0;
-		height: 100vh;
+	.summary-component {
+		max-height: none;
+		height: 100%;
 	}
 
-	.component-left {
-		height: 450px;
-		border-radius: 0 0 50px 50px;
-		padding: 25px 70px;
+	.final-result {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		height: 45%;
+		padding: 10px 50px;
 	}
 
-	.component-left-score {
+	.summary-report {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 55%;
+	}
+
+	.score {
 		padding: 25px;
-		width: 180px;
+		width: 130px;
 	}
 
-	.component-left-result {
-		margin: 30px 0 10px 0;
+	.score__result {
+		font-size: 7.2rem;
 	}
 
-	.component-right {
-		padding: 25px;
+	.output {
+		margin-top: 10px;
+		font-size: 3.5rem;
+	}
+
+	.summary-report {
+		padding: 20px 25px;
+	}
+
+	.content {
+		margin-bottom: 30px;
+	}
+
+	.content__row {
+		height: 40px;
+		margin-bottom: 15px;
+	}
+
+	.button {
+		height: 50px;
+		font-size: 2.7rem;
+	}
+}
+
+@media (max-width: 350px) {
+
+	.final-result {
+		padding: 10px 20px;
 	}
 }
